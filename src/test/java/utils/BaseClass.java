@@ -33,7 +33,6 @@ import java.net.URL;
 import java.util.List;
 import java.util.Random;
 import java.awt.Robot;
-
 public class BaseClass {
 
     protected WebDriver driver;
@@ -60,10 +59,30 @@ public class BaseClass {
         driver.get(url);
     }
 
-    /**
-     * @param locator
-     * @param text
-     */
+    public void brokenImages(By locator) {
+        List<WebElement> imageList = driver.findElements(locator);
+        System.out.println("The page under test has " + imageList.size() + " images");
+
+        Integer iBrokenImageCount = 0;
+        for (WebElement img : imageList) {
+            if (img != null) {
+                HttpClient client = HttpClientBuilder.create().build();
+                HttpGet request = new HttpGet(img.getAttribute("src"));
+                HttpResponse response = null;
+                try {
+                    response = client.execute(request);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                /* For valid images, the HttpStatus will be 200 */
+                if (response.getStatusLine().getStatusCode() != 200) {
+                    System.out.println(img.getAttribute("outerHTML") + " is broken.");
+                    iBrokenImageCount++;
+                }
+            }
+        }
+
+    }
     public void sendKeysTo(By locator, String text) {
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).sendKeys(text);
@@ -170,30 +189,7 @@ public class BaseClass {
         }
     }
 
-    public void brokenImages(By locator) {
-        List<WebElement> imageList = driver.findElements(locator);
-        System.out.println("The page under test has " + imageList.size() + " images");
 
-        Integer iBrokenImageCount = 0;
-        for (WebElement img : imageList) {
-            if (img != null) {
-                HttpClient client = HttpClientBuilder.create().build();
-                HttpGet request = new HttpGet(img.getAttribute("src"));
-                HttpResponse response = null;
-                try {
-                    response = client.execute(request);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                /* For valid images, the HttpStatus will be 200 */
-                if (response.getStatusLine().getStatusCode() != 200) {
-                    System.out.println(img.getAttribute("outerHTML") + " is broken.");
-                    iBrokenImageCount++;
-                }
-            }
-        }
-
-    }
 
     /*  public void clearWithRobotClass(int a) throws AWTException {
 
