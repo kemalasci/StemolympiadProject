@@ -14,11 +14,7 @@ import java.awt.*;
 import static pages.InformationClass.*;
 
 public class SingInStudentStepdefs extends BaseClass implements LocatorsInterface {
-    @Given("User should be ableto navigate to home page")
-    public void userShouldBeAbletoNavigateToHomePage() {
-        Config.maximized = true;
-        open(url);
-    }
+
 
 
     @When("Student first Registration and Login should be clickable")

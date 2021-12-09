@@ -23,11 +23,7 @@ public class SocialMediaStepdefs extends BaseClass implements LocatorsInterface 
 
 
 
-    @Given("open web page")
-    public void openWebPage() {
-        Config.maximized = true;
-        open(url);
-    }
+
 
     @When("click social media web pages  links")
     public void clickSocialMediaWebPagesLinks() {

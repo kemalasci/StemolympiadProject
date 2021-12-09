@@ -13,6 +13,7 @@ public interface LocatorsInterface {
     By phoneNumberTypeSelect = By.xpath("(//div[@class='d-flex flex-column col-6']//select)[1]");
     By phoneNumber = By.xpath("(//div[@class='d-flex flex-column col-6']//input)[3]");
     By countrySelect = By.xpath("(//div[@class='d-flex flex-column col-6']//select)[2]");
+
     By cityInput = By.xpath("(//div[@class='d-flex flex-column col-6']//input)[4]");
     By school = By.xpath("(//div[@class='d-flex flex-column col-6']//input)[5]");
     By branchSelect = By.xpath("(//div[@class='d-flex flex-column col-6']//select)[3]");
@@ -56,7 +57,8 @@ public interface LocatorsInterface {
     By studentPassConfirm = By.xpath("(//input[@class='form-control'])[2]");
     By validationErrorControl = By.cssSelector("span.text-danger.flex-fill.small>p.small");
     By linkKontrol = By.cssSelector("a");
-    By imageControl = By.tagName("img");
+    By imageKontrol = By.cssSelector("img");
+
     By buttoControl = By.cssSelector("iframe");
     By signIn = By.xpath("(//button[@class='btn base-button m-0 btn-warning'])[1]");
     By studentNummer = By.xpath("(//input[@class='form-control'])[1]");

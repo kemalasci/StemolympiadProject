@@ -1,6 +1,6 @@
 Feature: Registration-Supervisor  functionality
   Scenario: Registration-Supervisor
- Given User should be able to navigate to home page
+   Given User should be able to navigate to home Page
   When Registration should be clickable
   Then Supervisor first Sign-up should be clickable
   And Gaps in the Form tab should be filled

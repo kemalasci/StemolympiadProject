@@ -11,11 +11,7 @@ import utils.BaseClass;
 import utils.Config;
 import static pages.InformationClass.*;
 public class RegistrationSupervisorStepdefs extends BaseClass implements LocatorsInterface {
-    @Given("^User should be able to navigate to home page$")
-    public void userShouldBeAbleToNavigateToHomePage() {
-        Config.maximized = true;
-        open(url);
-    }
+
 
     @When("^Registration should be clickable$")
     public void registrationShouldBeClickable() {

@@ -39,6 +39,7 @@ public class BaseClass {
     protected WebDriver driver;
     private WebDriverWait wait;
     Robot robot;
+
     private void setUpDriver() {
         driver = Driver.getDriver();
         wait = new WebDriverWait(driver, 10);
@@ -50,8 +51,12 @@ public class BaseClass {
 
     }
 
-    public void open(String url) {
+    public  BaseClass(){
         setUpDriver();
+    }
+
+    public void open(String url) {
+
         driver.get(url);
     }
 
@@ -208,7 +213,7 @@ public class BaseClass {
 
         for (int i = 0; i < (a); i++) {
 
-   robot = new Robot();
+            robot = new Robot();
 
             robot.keyPress(KeyEvent.VK_BACK_SPACE);
             robot.keyRelease(KeyEvent.VK_BACK_SPACE);
@@ -218,12 +223,12 @@ public class BaseClass {
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).sendKeys(text);
     }
 
-    public void robotClass()  {
+    public void robotClass() {
 
 
         for (int i = 0; i < (9); i++) {
 
-        robot = null;
+            robot = null;
             try {
                 robot = new Robot();
             } catch (AWTException e) {
@@ -237,8 +242,6 @@ public class BaseClass {
 
 
     }
-
-
 
 
 }

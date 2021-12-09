@@ -4,6 +4,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 import pages.LocatorsInterface;
 import utils.BaseClass;
 import utils.Config;
@@ -13,6 +14,7 @@ import utils.Config;
 import static pages.InformationClass.url;
 
 public class HomePageFunctionalityStepdefs extends BaseClass implements LocatorsInterface {
+
 
 
 
@@ -30,7 +32,7 @@ public class HomePageFunctionalityStepdefs extends BaseClass implements Locators
 
     @Then("All images in the home page should be properly visible")
     public void allImagesInTheHomePageShouldBeProperlyVisible() {
-        brokenImages(imageControl);
+        brokenImages(imageKontrol);
     }
 
     @And("All buttons should be clickable")

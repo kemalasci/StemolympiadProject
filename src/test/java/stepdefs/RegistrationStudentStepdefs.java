@@ -18,11 +18,7 @@ import static pages.InformationClass.*;
 
 public class RegistrationStudentStepdefs extends BaseClass implements LocatorsInterface {
 
-    @Given("User should be able to navigate to homepage")
-    public void userShouldBeAbleToNavigateToHomepage() {
-        Config.maximized = true;
-        open(url);
-    }
+
 
     @When("Registration should beclickable")
     public void registrationShouldBeclickable() {
