@@ -53,7 +53,8 @@ public interface LocatorsInterface {
     By superVisorBranch = By.xpath("(//input[@class='form-control'])[5]");
     By superVisorUpdate = By.xpath("(//button[@class='btn btn-primary'])[2]");
     By SuperVisorUpdateSuccess = By.xpath("(//div[@class='d-flex small mt-4 col-lg-12'])[1]");
-    By studentPass = By.xpath("(//input[@class='form-control'])[1]");
+   By studentPass = By.xpath("(//input[@class='form-control'])[1]");//input#__BVID__90.form-control
+
     By studentPassConfirm = By.xpath("(//input[@class='form-control'])[2]");
     By validationErrorControl = By.cssSelector("span.text-danger.flex-fill.small>p.small");
     By linkKontrol = By.cssSelector("a");

@@ -1,5 +1,5 @@
 Feature: Registration-Studen Area functionality
-
+@smoke
   Scenario: Registration-Student Area
     Given User should be able to navigate to home Page
     When Registration should beclickable

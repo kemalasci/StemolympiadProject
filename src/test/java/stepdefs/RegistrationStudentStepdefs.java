@@ -75,7 +75,11 @@ public class RegistrationStudentStepdefs extends BaseClass implements LocatorsIn
         clickTo(nextButtonStudent);
 
         clickTo(studentPass);
-
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         sendKeysTo(studentPass, passwort);
         sendKeysTo(studentPassConfirm, passwort);
 

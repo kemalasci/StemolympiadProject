@@ -1,5 +1,5 @@
 Feature: Student Sing In functionality
-
+  @smoke
   Scenario:Student Sing In
     Given User should be able to navigate to home Page
     When Student first Registration and Login should be clickable

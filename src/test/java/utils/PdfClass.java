@@ -43,7 +43,9 @@ public class PdfClass extends InformationClass {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
+
+}
+
     public static  String readPdfContent(String url) throws IOException {
 
         URL pdfUrl = new URL(url);

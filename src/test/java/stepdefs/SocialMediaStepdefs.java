@@ -45,11 +45,12 @@ public class SocialMediaStepdefs extends BaseClass implements LocatorsInterface 
             driver.switchTo().window(ID);
 
 
-            Assert.assertTrue(driver.getCurrentUrl().toLowerCase().contains("com"));
+      Assert.assertTrue(driver.getCurrentUrl().toLowerCase().contains("com"));
+
 
             driver.close();
 
         }
-        driver.quit();
+  driver.quit();
     }
 }

@@ -1,4 +1,5 @@
 Feature: Registration-Supervisor  functionality
+  @smoke
   Scenario: Registration-Supervisor
    Given User should be able to navigate to home Page
   When Registration should be clickable

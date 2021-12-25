@@ -33,8 +33,8 @@ public class PdfKontrolStepdefs extends PdfClass implements LocatorsInterface {
         verifyContentInPDf( popularScienceMiddleCategoryPdf, popularScienceMiddle);
         verifyContentInPDf(popularScienceSeniorCategoryPdf, popularScienceSenior);
 
+driver.close();
 
-        driver.quit();
 
     }
 }
