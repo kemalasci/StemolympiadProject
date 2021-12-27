@@ -63,15 +63,7 @@ public class RegistrationStudentStepdefs extends BaseClass implements LocatorsIn
         clickTo(nextButtonStudent);
         waitForVisibilityOf(superVisorTel);
         clickTo(superVisorNameInput);
-       // sendKeysTo(superVisorNameInput, lastName);
-        //  verifyElementContainsText(control, "Supervisor");
 
-        // sendKeysTo(superVisorLastNameInput, lastName);
-        // sendKeysTo(superVisorEmailInput, superVisorEmail);
-        // sendKeysTo(superVisorTel, telNumber);
-        // select(superVisorPhoneNumSelect, phoneNumberType);
-        // sendKeysTo(superVisorSchool, superVisorSchoolName);
-        // select(superVisorBranchSelect, superVisorSelect);
         clickTo(nextButtonStudent);
 
         clickTo(studentPass);
