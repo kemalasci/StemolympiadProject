@@ -19,15 +19,9 @@ import static pages.InformationClass.url;
 public class SocialMediaStepdefs extends BaseClass implements LocatorsInterface {
 
 
-
-
-
-
-
-
     @When("click social media web pages  links")
     public void clickSocialMediaWebPagesLinks() {
-        String anaSayfaIDsi = driver.getWindowHandle();
+        String homePageIds = driver.getWindowHandle();
 
         List<WebElement> linkler = driver.findElements(sacialMediaList);
 
@@ -39,18 +33,18 @@ public class SocialMediaStepdefs extends BaseClass implements LocatorsInterface 
         Set<String> windowIDler = driver.getWindowHandles();
 
         for (String ID : windowIDler) {
-            if (ID.equals(anaSayfaIDsi)) continue;
+            if (ID.equals(homePageIds)) continue;
 
 
             driver.switchTo().window(ID);
 
 
-      Assert.assertTrue(driver.getCurrentUrl().toLowerCase().contains("com"));
+            Assert.assertTrue(driver.getCurrentUrl().toLowerCase().contains("com"));
 
 
             driver.close();
 
         }
-  driver.quit();
+        driver.quit();
     }
 }
